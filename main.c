@@ -2,7 +2,6 @@
 #include<stdlib.h>
 #include<stdbool.h>
 #include<string.h>
-#include<conio.h>
 #include<locale.h>
 
 #define MAX 16
