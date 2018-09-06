@@ -29,10 +29,10 @@ void saveMenu(void){
 	FILE* arquivo;
 	MENUS m;
 	strcpy(m.cabecalho, "-------------------------------------------\n SISTEMA DE ALGUMA COISA DE FACULDADE \n-------------------------------------------\n" );
-  strcpy(m.menuPrincipal, "1 - CURSOS\n2 - TURMAS\n3 - ALUNOS\n4 - Sair\n");
-  strcpy(m.menuCurso, "1 - Listar Cursos\n2 - Inserir Cursos\n3 - Editar Cursos\n4 - Remover Cursos\n5 - Voltar\n");
-  strcpy(m.menuTurma, "1 - Listar Turmas\n2 - Inserir Turmas\n3 - Editar Turmas\n4 - Remover Turmas\n5 - Voltar\n");
-  strcpy(m.menuAluno, "1 - Listar Alunos\n2 - Inserir Alunos\n3 - Editar Alunos\n4 - Remover Alunos\n5 - Voltar\n");
+  	strcpy(m.menuPrincipal, "1 - CURSOS\n2 - TURMAS\n3 - ALUNOS\n4 - Sair\n");
+  	strcpy(m.menuCurso, "1 - Listar Cursos\n2 - Inserir Cursos\n3 - Editar Cursos\n4 - Remover Cursos\n5 - Voltar\n");
+  	strcpy(m.menuTurma, "1 - Listar Turmas\n2 - Inserir Turmas\n3 - Editar Turmas\n4 - Remover Turmas\n5 - Voltar\n");
+  	strcpy(m.menuAluno, "1 - Listar Alunos\n2 - Inserir Alunos\n3 - Editar Alunos\n4 - Remover Alunos\n5 - Voltar\n");
 	arquivo = fopen("db\\PTBR.lang","wb");
 	fwrite(&m,sizeof(MENUS), 1 ,arquivo);
 	fclose(arquivo);
@@ -84,44 +84,6 @@ typedef struct{
 
 //dado de todos os cursos
 DADOS cursos;
-
-//Informacaoes em arquivo
-void carregaBd(void);
-void saveDados(void);
-//Tratamento de erros
-void errorData(void);
-void errorCurso(void);
-void errorTurma(void);
-//Validacao de dados
-bool validaString(void);
-bool validaData(void);
-//Menus do programa��o
-void imprimeMenu(char menu[]);
-unsigned char opcao(void);
-void menuPrincipal(void);
-void menuCurso(void);
-void menuTurma(void);
-void menuAluno(void);
-//Crud de Curso
-void listaCurso(void);
-void insereCurso(void);
-void editaCurso(void);
-void removeCurso(void);
-//Crud de Turma
-unsigned char listaTurma(void);
-void insereTurma(void);
-void editaTurma(void);
-void removeTurma(void);
-//Crud de Aluno
-char* listaAluno(void);
-void insereAluno(void);
-void editaAluno(void);
-void removeAluno(void);
-//Crud de Disciplina
-void listaDisciplina(void);
-void insereDisciplina(void);
-void editaDisciplina(void);
-void removeDisciplina(void);
 
 unsigned char main(void){
 
