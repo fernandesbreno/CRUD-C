@@ -1,2 +1,3 @@
-# CRUD-C
-Crud basico de uma faculdade com arquivos, ainda esta em desenvolvimento.
+# college-manger
+A crud of a college written in C and data saved in text files.
+(The development is still in progress)
